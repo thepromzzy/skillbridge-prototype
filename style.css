@@ -1,0 +1,279 @@
+/* === Reset & Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+h1,
+h2 {
+  color: #d63637;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #d63637;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #a82a2b;
+}
+
+/* === Sections === */
+.hero {
+  background: #fcecea;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.about,
+.roadmap,
+.testimonials,
+.cta {
+  padding: 3rem 0;
+}
+
+.roadmap ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.roadmap li {
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.roadmap li::before {
+  content: "\2713";
+  color: #d63637;
+  position: absolute;
+  left: 0;
+}
+
+.testimonial-card {
+  background: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: #333;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.testimonial-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta {
+  background: #d63637;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.cta form {
+  margin-top: 1rem;
+}
+
+.cta input[type="email"] {
+  padding: 0.75rem;
+  width: 250px;
+  max-width: 80%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+.cta button {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  background: #fff;
+  color: #d63637;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta button:hover {
+  background: #f0f0f0;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: #ccc;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* === Dark Mode === */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+body.dark-mode .hero {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .btn,
+body.dark-mode .cta button {
+  background: #f5f5f5;
+  color: #d63637;
+}
+
+body.dark-mode footer {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark-mode .testimonial-card {
+  background: #2e2e2e;
+  color: #f5f5f5;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+/* SkillBridge Styles */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.creator {
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #ffffff, #f3f3f3);
+  transition: background 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+body.dark-mode .creator {
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+}
+
+.creator.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.creator .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.creator h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.creator-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.creator-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 4px solid #d63637;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creator-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.creator-text {
+  max-width: 700px;
+  text-align: center;
+  color: #333;
+}
+
+body.dark-mode .creator-text {
+  color: #f1f1f1;
+}
+
+.creator-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.creator-text a {
+  color: #d63637;
+  text-decoration: none;
+}
+
+.creator-text a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .creator-content {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .creator-img {
+    max-width: 300px;
+  }
+
+  .creator-text {
+    flex: 1;
+  }
+}
