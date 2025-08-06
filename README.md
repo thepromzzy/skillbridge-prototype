@@ -40,4 +40,4 @@ SkillBridge is a waitlist landing page for a digital learning platform that help
 ```bash
 git clone https://github.com/thepromzzy/skillbridge-prototype.git
 cd skillbridge-prototype
-open index.html
+open Index.html
