@@ -73,6 +73,14 @@ body.dark-mode .site-logo a {
   padding: 4rem 0;
 }
 
+.hero p {
+  color: black;
+}
+
+body.dark-mode .hero p {
+  color: white;
+}
+
 .about,
 .roadmap,
 .testimonials,
@@ -328,4 +336,178 @@ body.dark-mode .creator-text {
 
 body.dark-mode .social-icons a img {
   filter: brightness(0) invert(1);
+}
+
+/* About Section Styles */
+#about {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+#about h2 {
+  font-size: 2rem;
+  color: #d63637; /* SkillBridge theme color */
+  margin-bottom: 10px;
+}
+
+.about-tagline {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.highlight {
+  color: #d63637;
+}
+
+#about p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+}
+
+/* Join mission emphasis */
+.join-mission {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #d63637;
+}
+
+/* Dark Mode Support */
+body.dark-mode #about {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode #about h2,
+body.dark-mode .highlight,
+body.dark-mode .join-mission {
+  color: #d63637; /* Keep theme color in dark mode */
+}
+
+body.dark-mode .about-tagline {
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #about {
+    padding: 30px 15px;
+  }
+  #about h2 {
+    font-size: 1.6rem;
+  }
+  .about-tagline {
+    font-size: 1rem;
+  }
+}
+
+.solution-section {
+  padding: 60px 20px;
+  background-color: #fff5f5; /* Softer branded red tint */
+  color: #222;
+  text-align: left;
+  border-radius: 10px; /* Smooth edges for better feel */
+}
+
+.solution-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.solution-headline {
+  font-size: 2rem;
+  color: #d63637;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.solution-subheadline {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.solution-body {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.solution-list {
+  text-align: left;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+  max-width: 700px;
+}
+
+.solution-list li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.solution-list li::before {
+  content: "✔";
+  color: #d63637;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.solution-cta {
+  display: inline-block;
+  background-color: #d63637;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.solution-cta:hover {
+  background-color: #b72d2e;
+}
+
+/* Dark Mode Support */
+body.dark-mode .solution-section {
+  background-color: #fff5f5;
+  color: black;
+}
+
+body.dark-mode .solution-headline {
+  color: #d63637;
+}
+
+body.dark-mode .solution-subheadline,
+body.dark-mode .solution-body {
+  color: black;
+}
+
+body.dark-mode .solution-list li::before {
+  color: #d63637;
 }
