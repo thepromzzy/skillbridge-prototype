@@ -1,9 +1,9 @@
 #  SkillBridge – Learn Tech Skills. Get Remote Jobs. Build Your Future.
 
-SkillBridge is a waitlist landing page for a digital learning platform that helps people (starting in Nigeria and expanding globally) learn in-demand tech skills and access remote job opportunities. Built using HTML, CSS, and JavaScript – no backend required.
+SkillBridge is a waitlist landing page for a digital learning platform that helps people (starting in Nigeria and expanding globally) learn in-demand tech skills and access remote job opportunities. Built using HTML, CSS, and JavaScript.
 
 ##  Live Site
- [Visit SkillBridge](https://689356d55788bedf037cf0a7--skillbridge-landing-page.netlify.app/)  
+ [Visit SkillBridge](https://skillbridge-landing-page.netlify.app/)  
 
 ---
 
@@ -40,4 +40,4 @@ SkillBridge is a waitlist landing page for a digital learning platform that help
 ```bash
 git clone https://github.com/thepromzzy/skillbridge-prototype.git
 cd skillbridge-prototype
-open index.html
+open Index.html
