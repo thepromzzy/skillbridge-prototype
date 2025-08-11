@@ -34,9 +34,9 @@ h2 {
 /* Logo styles - scrolls with the page */
 .site-logo {
   position: relative;
-  top: 20px;
-  left: 20px;
-  font-size: 1.8rem;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
 }
@@ -349,6 +349,13 @@ body.dark-mode .social-icons a img {
   max-width: 900px;
   margin: auto;
   text-align: left;
+  background-color: #fff5f5;
+  padding: 20px;
+  border: #d63637 2px solid;
+}
+
+body.dark-mode .about-container {
+  color: black;
 }
 
 #about h2 {
@@ -361,7 +368,7 @@ body.dark-mode .social-icons a img {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #555;
+  color: black;
 }
 
 .highlight {
@@ -403,7 +410,7 @@ body.dark-mode .join-mission {
 }
 
 body.dark-mode .about-tagline {
-  color: #ccc;
+  color: black;
 }
 
 /* Responsive Design */
@@ -469,7 +476,6 @@ body.dark-mode .about-tagline {
 }
 
 .solution-list li::before {
-  content: "✔";
   color: #d63637;
   position: absolute;
   left: 0;
