@@ -26,6 +26,31 @@ h2 {
   margin-bottom: 1rem;
 }
 
+/* Logo container */
+.logo-wrapper {
+  background: none; /* no background color */
+  padding: 10px 20px;
+}
+/* Logo styles - scrolls with the page */
+.site-logo {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.site-logo a {
+  text-decoration: none;
+  color: #d63637; /* main brand color */
+}
+
+/* Logo color in dark mode */
+body.dark-mode .site-logo a {
+  color: #d63637;
+}
+
 .btn {
   display: inline-block;
   background: #d63637;
