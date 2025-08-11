@@ -81,7 +81,7 @@ toggle.addEventListener('click', () => {
 updateToggleButton();
 
 // Typing animation in hero section
-const text = "Learn Tech Skills. Get Remote Jobs. Build Your Future.";
+const text = "Learn. Practice. Apply. Earn.";
 const typedText = document.querySelector(".hero p");
 let index = 0;
 
