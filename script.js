@@ -1,148 +1,157 @@
-// Simple fade-in on scroll effect
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
-    }
+// Small interactions: mobile nav toggle, footer year, simple form behavior
+
+document.addEventListener('DOMContentLoaded', function () {
+  // footer year
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // mobile nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const mainNav = document.getElementById('main-nav');
+  navToggle && navToggle.addEventListener('click', () => {
+    if (!mainNav) return;
+    const shown = mainNav.style.display === 'flex';
+    mainNav.style.display = shown ? 'none' : 'flex';
+    mainNav.style.flexDirection = 'column';
+    mainNav.style.gap = '12px';
+    mainNav.style.padding = '12px';
+    mainNav.style.background = '#fff';
+    mainNav.style.position = 'absolute';
+    mainNav.style.right = '18px';
+    mainNav.style.top = '64px';
+    mainNav.style.borderRadius = '8px';
+    mainNav.style.boxShadow = shown ? '' : '0 8px 30px rgba(0,0,0,0.08)';
   });
-}, {
-  threshold: 0.1
+
+  // Waitlist form: show small success message when user submits (note: mailto will open)
+  const waitlistForm = document.getElementById('waitlist-form');
+  if (waitlistForm) {
+    waitlistForm.addEventListener('submit', (e) => {
+      // allow mailto to proceed, but give quick visual feedback
+      const btn = waitlistForm.querySelector('button[type="submit"]');
+      if (btn) {
+        btn.disabled = true;
+        const old = btn.textContent;
+        btn.textContent = 'Opening mail client…';
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = old;
+        }, 2200);
+      }
+      // we do not preventDefault because mailto should open the user's mail app
+    });
+  }
+
+  // Add small copy-to-clipboard for course card titles on long-press (optional)
+  document.querySelectorAll('.course-card h3').forEach(h => {
+    h.addEventListener('click', () => {
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(h.textContent.trim()).then(() => {
+        const old = h.textContent;
+        h.textContent = 'Copied ✓';
+        setTimeout(() => (h.textContent = old), 900);
+      });
+    });
+  });
+
+}); 
+
+// Mobile menu toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+const closeMenu = document.getElementById("close-menu");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.add("show");
 });
 
-// Apply to all sections
-const sections = document.querySelectorAll('section');
-sections.forEach(section => {
-  section.classList.add('hidden');
+closeMenu.addEventListener("click", () => {
+  navLinks.classList.remove("show");
+});
+
+// Close menu when a link is clicked (mobile/tablet)
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+
+// FAQ Accordion
+const faqQuestions = document.querySelectorAll(".faq-question");
+faqQuestions.forEach((question) => {
+  question.addEventListener("click", function () {
+    faqQuestions.forEach((item) => {
+      if (item !== question) {
+        item.classList.remove("active");
+        item.nextElementSibling.style.maxHeight = null;
+      }
+    });
+    question.classList.toggle("active");
+    const answer = question.nextElementSibling;
+    if (question.classList.contains("active")) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = null;
+    }
+  });
+});
+
+// Fade-in Scroll Animation
+const fadeInSections = document.querySelectorAll(".fade-in-section");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
+
+fadeInSections.forEach((section) => {
   observer.observe(section);
 });
 
-// Reveal testimonial cards with animation
-const testimonialObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, {
-  threshold: 0.2
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeEls = document.querySelectorAll(".fade-in");
+
+  const revealOnScroll = () => {
+    fadeEls.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const elementBottom = el.getBoundingClientRect().bottom;
+      const windowHeight = window.innerHeight;
+
+      // If element is inside viewport, add visible
+      if (elementTop < windowHeight - 50 && elementBottom > 50) {
+        el.classList.add("visible");
+      } else {
+        // Remove class when it leaves viewport so it can re-animate
+        el.classList.remove("visible");
+      }
+    });
+  };
+
+  // Run on load and on scroll
+  revealOnScroll();
+  window.addEventListener("scroll", revealOnScroll);
 });
 
-const testimonialCards = document.querySelectorAll('.testimonial-card');
-testimonialCards.forEach(card => {
-  testimonialObserver.observe(card);
+// Fade-up animation on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-up");
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
 });
 
-// Dark mode toggle with image icons
-const toggle = document.createElement('button');
-toggle.id = 'dark-mode-toggle';
-toggle.title = 'Toggle Dark Mode';
-toggle.style.position = 'fixed';
-toggle.style.top = '10px';
-toggle.style.right = '10px';
-toggle.style.zIndex = '1000';
-toggle.style.padding = '8px';
-toggle.style.border = 'none';
-toggle.style.borderRadius = '50%';
-toggle.style.cursor = 'pointer';
-toggle.style.background = '#fff';
-toggle.style.display = 'flex';
-toggle.style.alignItems = 'center';
-toggle.style.justifyContent = 'center';
-toggle.style.width = '48px';
-toggle.style.height = '48px';
-document.body.appendChild(toggle);
-
-const iconImg = document.createElement('img');
-iconImg.src = 'light-icon.png'; // Replace with your actual image path
-iconImg.alt = 'Toggle Mode';
-iconImg.style.width = '24px';
-iconImg.style.height = '24px';
-iconImg.style.objectFit = 'contain';
-toggle.appendChild(iconImg);
-
-function updateToggleButton() {
-  const isDark = document.body.classList.contains('dark-mode');
-  if (isDark) {
-    toggle.style.background = '#fff';
-    iconImg.src = 'images/dark-icon.png'; // Replace with your dark mode image
-    toggle.title = 'Switch to Light Mode';
-  } else {
-    toggle.style.background = '#d63637';
-    iconImg.src = 'images/light-icon.png'; // Replace with your light mode image
-    toggle.title = 'Switch to Dark Mode';
-  }
-}
-
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  updateToggleButton();
-});
-
-updateToggleButton();
-
-// Typing animation in hero section
-const text = "Learn. Practice. Apply. Earn.";
-const typedText = document.querySelector(".hero p");
-let index = 0;
-
-function type() {
-  if (index < text.length) {
-    typedText.textContent += text.charAt(index);
-    index++;
-    setTimeout(type, 50);
-  }
-}
-
-typedText.textContent = "";
-type();
-
-// Handle join waitlist form submission
-const form = document.querySelector(".cta form");
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const email = form.querySelector("input[type='email']").value.trim().toLowerCase();
-    const joinedBefore = localStorage.getItem("joinedEmails");
-    let joinedList = joinedBefore ? JSON.parse(joinedBefore) : [];
-
-    const confirmation = document.createElement("p");
-    confirmation.classList.add("confirmation-message");
-    confirmation.style.marginTop = "1rem";
-    confirmation.style.fontWeight = "bold";
-
-    const existingMessage = form.querySelector(".confirmation-message");
-    if (existingMessage) existingMessage.remove();
-
-    if (joinedList.includes(email)) {
-      confirmation.textContent = "⚠️ This email has already joined the SkillBridge waitlist.";
-      confirmation.style.color = "blue";
-    } else {
-      joinedList.push(email);
-      localStorage.setItem("joinedEmails", JSON.stringify(joinedList));
-
-      const onboardingMessage = `Welcome to SkillBridge!\n\nThank you for joining our waitlist. You're now part of a vibrant community of learners exploring tech skills and global opportunities.\n\nYour journey starts now 🚀`;
-
-      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=thepromzzy@gmail.com&su=Join%20Waitlist&body=${encodeURIComponent(onboardingMessage + '\n\nUser Email: ' + email)}`, '_blank');
-
-      confirmation.innerHTML = " Thank you! Your email has been processed. Check your inbox.<br><strong>Welcome to SkillBridge!</strong> You're now part of a community learning tech and unlocking global opportunities.";
-      confirmation.style.color = "white";
-    }
-
-    form.appendChild(confirmation);
-  });
-  // Scroll animation for .creator section
-const creatorSection = document.querySelector('.creator');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      creatorSection.classList.add('show');
-    }
-  });
-}, { threshold: 0.3 });
-
-if (creatorSection) {
-  observer.observe(creatorSection);
-}
-
-}
 
