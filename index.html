@@ -2,179 +2,377 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkillBridge - Learn Skills. Earn Globally.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SkillBridge — Learn Skills. Earn Globally.</title>
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
 </head>
 
 <body>
-    <div class="logo-wrapper">
-        <h1 class="site-logo"><a href="#">SkillBridge</a></h1>
-    </div>
-    <header class="hero">
-        <div class="container">
-            <p>Learn. Practice. Apply. Earn.</p>
-            <a href="#join" class="btn">Join the Waitlist</a>
-        </div>
+    <!-- Header / Logo -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home" class="fade-in">SkillBridge</a>
+            </div>
+
+            <!-- Hamburger icon -->
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+
+            <!-- Navigation links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="fade-in">About</a></li>
+                <li><a href="#courses" class="fade-in">Courses</a></li>
+                <li><a href="#where learners work" class="fade-in">Where Our Learners Work</a></li>
+                <li><a href="#why skillbridge" class="fade-in">Why SkillBridge</a></li>
+                <li><a href="#testimonials" class="fade-in">Testimonials</a></li>
+                <li class="faq-link"><a href="#faq" class="fade-in">FAQ</a></li>
+                <li><a href="#join" class="fade-in">Join Waitlist</a></li>
+                <!-- Close button inside menu -->
+                <li class="close-menu" id="close-menu">×</li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="about">
-        <div class="about-container">
-            <h2>About SkillBridge</h2>
-            <p class="about-tagline">Empowering the Next Generation of Global Tech Talent</p>
-            <p>
-                At <span class="highlight">SkillBridge</span>, we believe that <strong>talent knows no borders</strong>.
-                Our mission is simple yet bold—connect ambitious learners from all walks of life to
-                <strong>world-class tech skills, remote job opportunities, and the global digital economy</strong>.
-            </p>
-            <p>
-                Born from the vision of bridging the gap between <strong>potential and opportunity</strong>, SkillBridge
-                was created to ensure that <strong>where you live</strong> never limits <strong>how far you can
-                    go</strong>.
-                We’ve seen countless passionate individuals held back not by their skills, but by their location,
-                resources, or access. That ends here.
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <h1 class="hero-title" class="fade-in">Learn the Skills</h1>
+            <h1 class="hero-title1" class="fade-in">Land the Job</h1>
+            <h1 class="hero-title2" class="fade-in">Build Your Future</h1>
+            <p class="hero-sub">
+                SkillBridge equips ambitious learners across Africa with practical tech skills, real-world projects,
+                and direct access to remote hiring pipelines. Start locally, compete globally.
             </p>
 
-            <h3>What Makes SkillBridge Different</h3>
-            <ul class="about-list">
-                <li><strong>Hands-On Learning</strong> – Real projects that prepare you for real jobs</li>
-                <li><strong>Global Job Access</strong> – Remote-first opportunities with top companies worldwide</li>
-                <li><strong>AI-Powered Career Growth</strong> – Personalized resume, portfolio, and interview support
-                </li>
-                <li><strong>Community-Driven Success</strong> – Learn, collaborate, and grow with peers and mentors</li>
+            <ul class="hero-features">
+                <li class="fade-in">Expert-led, hands-on curriculum</li>
+                <li class="fade-in">Project portfolio that gets interviews</li>
+                <li class="fade-in">Mentorship & direct hiring introductions</li>
             </ul>
 
-            <p>
-                Whether you’re starting from scratch or looking to <strong>level up your career</strong>, SkillBridge is
-                your
-                launchpad to the world stage.
-            </p>
-            <p class="join-mission"><strong>Join our mission today—because the future belongs to those who build
-                    it.</strong></p>
-        </div>
+            <div class="hero-ctas">
+                <a class="btn-primary" id="join-waitlist" href="#join">
+                    Join the Waitlist — It's Free
+                </a>
+                <a class="btn-ghost" href="#courses">View Courses</a>
+            </div>
     </section>
 
-    <section class="solution-section">
-        <div class="solution-container">
-            <h2 class="solution-headline">The Four-Word Impact That Wins Attention</h2>
-            <p class="solution-subheadline">
-                SkillBridge condenses your mission into short, memorable statements that stick — turning curious
-                visitors into loyal users in seconds.
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="site-inner">
+            <h2 class="fade-in">About SkillBridge</h2>
+            <p class="lead">
+                Empowering the next generation of global tech talent. SkillBridge bridges the gap between learning and
+                earning by combining
+                industry-led lessons, practical projects, and direct access to remote hiring networks — all built for
+                learners starting in Nigeria
+                and expanding worldwide.
             </p>
-            <p class="solution-body">
-                In a world where attention spans are shrinking, your message needs to land fast.
-                That’s why we built the <strong>Four-Word Impact System</strong> — a proven method that delivers
-                clarity, emotion, and value in just four words.
-            </p>
-            <ul class="solution-list">
-                <li><strong>Clarity in Seconds</strong> – Tell your story instantly, no overthinking required.</li>
-                <li><strong>Emotion + Logic Balance</strong> – Inspire action while proving value.</li>
-                <li><strong>Adaptable Messaging</strong> – Test multiple taglines to find what resonates most.</li>
-                <li><strong>Brand Consistency</strong> – Keep your voice strong across every platform.</li>
-            </ul>
-            <p class="solution-body">
-                With SkillBridge, you’re not just saying <em>what you do</em> — you’re making people
-                <strong>feel</strong> it.
-            </p>
-            <a href="#join" class="solution-cta">Start Your Journey</a>
-        </div>
-    </section>
 
-
-    <section class="roadmap">
-        <div class="container">
-            <h2>Learning Roadmap</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript Basics</li>
-                <li>Build Responsive Websites</li>
-                <li>Learn Git & GitHub</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <div class="testimonial-card">
-                <p>“SkillBridge gave me direction. I went from zero to building a webpage in six weeks!”</p>
-                <strong>– Treasure, Kaduna</strong>
+            <div class="about-grid">
+                <div><strong class="fade-in">Hands-on</strong>
+                    <p>Build projects that show what you can do — not just what you know.</p>
+                </div>
+                <div><strong class="fade-in">Mentorship</strong>
+                    <p>Guided learning with industry mentors who help you launch your career.</p>
+                </div>
+                <div><strong class="fade-in">Jobs-ready</strong>
+                    <p>Portfolio reviews, interview practice, and introductions to remote employers.</p>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p>“The roadmap is so beginner-friendly. I know very soon I'll be able to apply for a Job!”</p>
-                <strong>– Adesanya, Lagos</strong>
-            </div>
-            <div class="testimonial-card">
-                <p>"The best thing I discovered this year. SkillBridge is the future."</p>
-                <strong>– Obinna, Anambra</strong>
-            </div>
-            <div class="testimonial-card">
-                <p>"SkillBridge gave me the confidence to chase global remote jobs with real skills."</p>
-                <strong>– Fatima, Abuja</strong>
+            <!-- Author info -->
+            <div class="about-author">
+                <img src="/images/Promzzy pic.jpg" alt="Promise Jacob" class="author-img">
+                <strong>Promise Jacob</strong>
+                <span>CEO, SkillBridge</span>
             </div>
         </div>
     </section>
 
-    <section class="creator">
-        <div class="container">
-            <h2>Meet the Creator</h2>
-            <div class="creator-content">
-                <img src="/images/Promzzy pic.jpg" alt="Creator Image" class="creator-img" />
-                <div class="creator-text">
-                    <p>Hi, I'm <strong>Promise Jacob</strong> — an 18 year old front-end developer from Nigeria on a
-                        mission to build a global tech empire starting right here in Africa.</p>
-                    <p>Inspired by the journey of innovators like Mark Zuckerberg, I created SkillBridge to empower the
-                        next generation of digital builders. I believe that with the right skills and opportunities,
-                        young Africans can compete and win on the global tech stage.</p>
-                    <p>I’m passionate about creating tools, communities, and products that don’t just make money — but
-                        make a difference. SkillBridge is only the beginning.</p>
-                    <p><strong>Email:</strong>
-                        <a href="mailto:thepromzzy@gmail.comsubject=Hello%20Promise&body=Hi%20Promise%2C%0AI%20just%20visited%20SkillBridge%20and%20wanted%20to%20connect%20with%20you."
-                            target="_blank">
-                            thepromzzy@gmail.com
-                        </a>
+    <!-- Courses -->
+    <section id="courses" class="courses">
+        <div class="site-inner">
+            <h2 class="fade-in">Courses — Start Building Real Skills</h2>
+            <p class="sub">Practical, project-focused courses designed to get you job-ready and freelancing-ready.</p>
+
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <article class="course-card">
+                    <img src="/images/front-end.jpg" alt="Front-end Development" class="course-img" />
+                    <h3 class="fade-in">Front-End Development</h3>
+                    <p class="fade-in">HTML, CSS, JavaScript, and responsive UI — build production-ready websites and
+                        single-page apps.
                     </p>
+                    <a class="course-cta"
+                        href="mailto:thepromzzy@gmail.com?subject=Enroll%20-%20Front-End%20Development&body=Hi%20Promise%2C%0A%0AI%20want%20to%20enroll%20in%20the%20Front-End%20Development%20course.">Enroll</a>
+                </article>
 
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/promise-jacob-473653326" target="_blank">
-                            <img src="/images/linkedin-logo-svgrepo-com.png" alt="LinkedIn" />
-                        </a>
-                        <a href="https://instagram.com/thepromzzy" target="_blank">
-                            <img src="/images/instagram-logo-facebook-2-svgrepo-com.png" alt="Instagram" />
-                        </a>
-                        <a href="https://github.com/thepromzzy" target="_blank">
-                            <img src="/images/github-logo-svgrepo-com.png" alt="GitHub" />
-                        </a>
-                    </div>
+                <!-- Course 2 -->
+                <article class="course-card">
+                    <img src="/images/reactjs.png" alt="React & Modern JavaScript" class="course-img" />
+                    <h3 class="fade-in">React & Modern JavaScript</h3>
+                    <p class="fade-in">Component architecture, state management, hooks, and best practices for modern
+                        web apps.</p>
+                    <a class="course-cta"
+                        href="mailto:thepromzzy@gmail.com?subject=Enroll%20-%20React%20%26%20Modern%20JavaScript&body=Hi%20Promise%2C%0A%0AI%20want%20to%20enroll%20in%20React%20%26%20Modern%20JavaScript.">Enroll</a>
+                </article>
+
+                <!-- Course 3 -->
+                <article class="course-card">
+                    <img src="/images/18301797_5882087.jpg" alt="UI/UX Design" class="course-img" />
+                    <h3 class="fade-in">UI / UX Design</h3>
+                    <p class="fade-in">User research, wireframing, prototyping, and design systems that convert users
+                        into customers.
+                    </p>
+                    <a class="course-cta"
+                        href="mailto:thepromzzy@gmail.com?subject=Enroll%20-%20UI%20%2F%20UX%20Design&body=Hi%20Promise%2C%0A%0AI%20want%20to%20enroll%20in%20UI%20%2F%20UX%20Design.">Enroll</a>
+                </article>
+
+                <!-- Course 4 -->
+                <article class="course-card">
+                    <img src="/images/data analysis.jpg" alt="Data Analysis" class="course-img" />
+                    <h3 class="fade-in">Data Analysis & Visualization</h3>
+                    <p class="fade-in">Excel, SQL, Python basics, and storytelling with data to make decisions that
+                        matter.</p>
+                    <a class="course-cta"
+                        href="mailto:thepromzzy@gmail.com?subject=Enroll%20-%20Data%20Analysis&body=Hi%20Promise%2C%0A%0AI%20want%20to%20enroll%20in%20Data%20Analysis.">Enroll</a>
+                </article>
+
+                <!-- Course 5 -->
+                <article class="course-card">
+                    <img src="/images/product management.jpg" alt="Product Management" class="course-img" />
+                    <h3 class="fade-in">Product Management</h3>
+                    <p class="fade-in">Market research, MVP building, and working with engineers and designers to ship
+                        products users
+                        love.</p>
+                    <a class="course-cta"
+                        href="mailto:thepromzzy@gmail.com?subject=Enroll%20-%20Product%20Management&body=Hi%20Promise%2C%0A%0AI%20want%20to%20enroll%20in%20Product%20Management.">Enroll</a>
+                </article>
+
+                <!-- Course 6 -->
+                <article class="course-card">
+                    <img src="/images/DevOps & Cloud Basics.jpg" alt="DevOps & Cloud Basics" class="course-img" />
+                    <h3 class="fade-in">DevOps & Cloud Basics</h3>
+                    <p class="fade-in">CI/CD, cloud fundamentals, and deployment workflows to ship and scale your apps
+                        reliably.</p>
+                    <a class="course-cta"
+                        href="mailto:thepromzzy@gmail.com?subject=Enroll%20-%20DevOps%20%26%20Cloud%20Basics&body=Hi%20Promise%2C%0A%0AI%20want%20to%20enroll%20in%20DevOps%20%26%20Cloud%20Basics.">Enroll</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="where learners work" class="learners-work">
+        <div class="container">
+            <h2>Where Our Learners Work</h2>
+            <div class="company-logos">
+                <img class="fade-up"
+                    src="https://res.cloudinary.com/talentql-inc/image/upload/v1692529638/website/brands/norebase_gntqwv.svg"
+                    alt="Norebase">
+                <img class="fade-up"
+                    src="https://res.cloudinary.com/talentql-inc/image/upload/v1692529955/website/brands/fluna_u8unsl.svg"
+                    alt="Fluna">
+                <img class="fade-up"
+                    src="https://res.cloudinary.com/talentql-inc/image/upload/v1692529637/website/brands/fcmb_cj9xyu.svg"
+                    alt="FCMB">
+                <img class="fade-up"
+                    src="https://res.cloudinary.com/talentql-inc/image/upload/v1692529640/website/brands/quidax_zriud8.svg"
+                    alt="Quidax">
+                <img class="fade-up"
+                    src="https://res.cloudinary.com/talentql-inc/image/upload/v1692529637/website/brands/binance_c7ojod.svg"
+                    alt="Binance">
+                <img class="fade-up"
+                    src="https://res.cloudinary.com/talentql-inc/image/upload/v1692529638/website/brands/lipalater_zk6byx.svg"
+                    alt="Nestcoin">
+                <img class="fade-up"
+                    src="https://res.cloudinary.com/talentql-inc/image/upload/v1692529637/website/brands/afrikrea_hphc9i.svg"
+                    alt="Afrikrea">
+                <img class="fade-up"
+                    src="	https://res.cloudinary.com/talentql-inc/image/upload/v1692529640/website/brands/zedcrest_fwalot.svg"
+                    alt="Zedcrest">
+                <img class="fade-up"
+                    src="	https://res.cloudinary.com/talentql-inc/image/upload/v1692529637/website/brands/jpmorgan_rtetvu.svg"
+                    alt="JPMorgan Chase & Co.">
+            </div>
+        </div>
+    </section>
+
+    <section id="why skillbridge" class="why-skillbridge">
+        <div class="container">
+            <h2 class="fade-up">Why SkillBridge?</h2>
+
+            <div class="reason fade-up">
+                <div class="reason-icon">
+                    <img src="/images/location-pin-svgrepo-com.png" alt="Learn Anywhere">
+                </div>
+                <div class="reason-text">
+                    <h3>Learn from Anywhere</h3>
+                    <p>Whether you're at home, in a café, or on the go, SkillBridge gives you flexible learning so you
+                        can grow at your own pace from any location.</p>
+                </div>
+            </div>
+
+            <div class="reason fade-up">
+                <div class="reason-icon">
+                    <img src="/images/learning-head-book-education-svgrepo-com.png" alt="Hands-on Learning">
+                </div>
+                <div class="reason-text">
+                    <h3>Hands-on, Practical Learning</h3>
+                    <p>Skip boring lectures. Build real projects and a portfolio employers can’t ignore. Everything is
+                        geared toward real hiring outcomes.</p>
+                </div>
+            </div>
+
+            <div class="reason fade-up">
+                <div class="reason-icon">
+                    <img src="/images/global-connect-svgrepo-com.png" alt="Global Network">
+                </div>
+                <div class="reason-text">
+                    <h3>Global Career Opportunities</h3>
+                    <p>Join a community landing remote roles worldwide. We connect you to global hiring pipelines,
+                        mentors, and tech leaders.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="site-inner">
+            <h2>Testimonials</h2>
+            <div class="test-grid">
+                <blockquote class="test-card">
+                    <p class="fade-in">“I built a portfolio and landed my first remote internship in 8 weeks.”</p>
+                    <footer class="fade-in">— Treasure, Kaduna</footer>
+                </blockquote>
+                <blockquote class="test-card">
+                    <p class="fade-in">“The mentorship and project work changed how I approach real problems.”</p>
+                    <footer class="fade-in">— Adesanya, Lagos</footer>
+                </blockquote>
+                <blockquote class="test-card">
+                    <p class="fade-in">“Practical, focused, and exactly what a beginner needs to launch a career.”</p>
+                    <footer class="fade-in">— Fatima, Abuja</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator -->
+    <section id="creator" class="creator">
+        <div class="site-inner creator-inner">
+            <div class="creator-media">
+                <img src="/images/Promzzy pic.jpg" alt="Promise Jacob — Creator" />
+            </div>
+            <div class="creator-text">
+                <h2 class="fade-in">Meet the Creator — Promise Jacob</h2>
+                <p class="fade-in">
+                    I’m Promise — an 18-year-old front-end developer from Nigeria building SkillBridge to help talented
+                    Africans
+                    learn practical skills and access global remote work. I built this because I believe location should
+                    never limit ambition.
+                </p>
+                <p><strong>Contact:</strong>
+                    <a href="mailto:thepromzzy@gmail.com" class="fade-in">thepromzzy@gmail.com</a>
+                </p>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/promise-jacob-473653326" target="_blank" rel="noopener"><img
+                            src="/images/linkedin-logo-svgrepo-com.png" alt="LinkedIn" /></a>
+                    <a href="https://github.com/thepromzzy" target="_blank" rel="noopener"><img
+                            src="/images/github-logo-svgrepo-com.png" alt="GitHub" /></a>
+                    <a href="https://instagram.com/thepromzzy" target="_blank" rel="noopener"><img
+                            src="/images/instagram-logo-facebook-2-svgrepo-com.png" alt="Instagram" /></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="faq" class="faq fade-in-section">
+        <div class="container">
+            <h2 class="fade-in">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">What is SkillBridge?</button>
+                <div class="faq-answer">
+                    <p class="fade-in">SkillBridge is an online platform designed to help you learn in-demand tech
+                        skills and connect
+                        with remote job opportunities globally, starting from Nigeria.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Who can join SkillBridge?</button>
+                <div class="faq-answer">
+                    <p class="fade-in">Anyone eager to learn tech skills — from beginners to professionals looking to
+                        upskill — can join
+                        SkillBridge.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is SkillBridge free?</button>
+                <div class="faq-answer">
+                    <p class="fade-in">We offer both free and premium courses. Free courses provide a strong foundation,
+                        while premium
+                        courses give you deeper, hands-on training.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What kind of jobs will I get?</button>
+                <div class="faq-answer">
+                    <p class="fade-in">We connect you with remote opportunities in software development, design, digital
+                        marketing, data
+                        analysis, and more.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How do I join the waitlist?</button>
+                <div class="faq-answer">
+                    <p class="fade-in">Scroll to the "Join Waitlist" section, enter your email, and you'll be the first
+                        to know when we
+                        launch!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="join" class="cta">
-        <div class="container">
-            <h2>Ready to Learn & Earn?</h2>
-            <p>Join the waitlist to be the first to access SkillBridge beta!</p>
-            <form>
-                <input type="email" placeholder="Enter your email" required />
-                <button type="submit">Join Waitlist</button>
+    <!-- Join / CTA -->
+    <section id="join" class="join">
+        <div class="site-inner">
+            <h2 class="fade-in">Ready to learn & earn?</h2>
+            <p>Join the SkillBridge waitlist to get early access, course news, and priority introductions to hiring
+                partners.</p>
+            <form id="waitlist-form" class="waitlist-form" action="mailto:thepromzzy@gmail.com" method="get"
+                autocomplete="off">
+                <input id="email-input" name="email" type="email" placeholder="your email address" required />
+                <button type="submit" class="btn-primary">Join Waitlist</button>
             </form>
+            <p class="small-note">No spam — only updates about courses and hiring opportunities.</p>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 SkillBridge. All rights reserved.</p>
-            <div class="socials">
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-inner">
+            <div>© <span id="year"></span> SkillBridge. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#courses">Courses</a>
+                <a href="#creator">Contact</a>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
