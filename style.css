@@ -91,7 +91,6 @@ html {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -120,16 +119,17 @@ html {
     position: fixed;
     top: 0;
     right: -100%;
-    height: auto; /* Shorter height for professional look */
-    max-height: 80vh; /* Limit height */
-    width: 250px;
-    background: #fdf6ff; /* User-friendly background */
+    height: 100vh; /* Full screen height */
+    width: 100%; /* Full screen width */
+    background: white; /* User-friendly background */
     flex-direction: column;
-    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     padding: 2rem 1rem;
     transition: right 0.3s ease-in-out;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    z-index: 999; /* Keep above everything */
   }
 
   .nav-links.show {
@@ -144,11 +144,13 @@ html {
   .close-menu {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 15px;
+    right: 20px;
     font-size: 2rem;
     cursor: pointer;
     color: #d63637;
+    background: none;
+    border: none;
   }
 }
 
@@ -811,4 +813,11 @@ a {
 .fade-up.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.join-w {
+  background-color: #d63637;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
 }
